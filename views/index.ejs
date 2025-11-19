@@ -1,11 +1,87 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio CESUR</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+  <header id="cabecera-principal">
+    <nav class="navegacion">
+      <div class="marca">
+        <h1>CESUR App</h1>
+      </div>
+      <ul class="menu">
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Servicios</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="seccion-hero">
+    <div class="contenedor-central">
+      
+      <div class="columna-texto">
+        <h2>¡Bienvenido!</h2>
+        <p>Descubre todas las funcionalidades que tenemos preparadas para ti. Únete a nuestra comunidad y empieza a disfrutar de una experiencia única.</p>
+        <p>Accede a tu cuenta o regístrate en segundos para comenzar tu aventura con nosotros.</p>
+      </div>
+
+      <div class="columna-interaccion">
+        
+        <div id="opciones-iniciales" class="visible">
+          <button class="boton-grande" id="btn-mostrar-login">
+            <h3>Ya estoy registrado</h3>
+          </button>
+          <button class="boton-grande" id="btn-mostrar-registro">
+            <h3>No estoy registrado aún</h3>
+          </button>
+        </div>
+
+        <div id="panel-login" class="oculto panel-animado">
+          <div class="titulo-panel">
+            <h3>Ya estoy registrado</h3>
+          </div>
+          <form class="formulario">
+            <label for="login-email">Correo electrónico</label>
+            <input type="email" id="login-email" placeholder="Correo electrónico" required>
+            
+            <label for="login-pass">Contraseña</label>
+            <input type="password" id="login-pass" placeholder="Contraseña" required>
+
+            <div class="botones-formulario">
+              <button type="submit" class="btn-enviar">Enviar</button>
+              <button type="button" class="btn-cancelar">Cancelar</button>
+            </div>
+          </form>
+        </div>
+
+        <div id="panel-registro" class="oculto panel-animado">
+          <div class="titulo-panel">
+            <h3>No estoy registrado aún</h3>
+          </div>
+          <p class="texto-instrucciones">Introduce tu correo electrónico para crear una cuenta.</p>
+          <form class="formulario">
+            <label for="registro-email">Correo electrónico</label>
+            <input type="email" id="registro-email" placeholder="Correo electrónico" required>
+
+            <div class="botones-formulario">
+              <button type="submit" class="btn-enviar">Enviar</button>
+              <button type="button" class="btn-cancelar">Cancelar</button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer id="pie-pagina">
+    <p>&copy; 2025 CESUR - Desarrollo Web Entorno Servidor</p>
+  </footer>
+
+  <script src="/javascripts/app.js"></script>
+</body>
 </html>
